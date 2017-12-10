@@ -1,0 +1,78 @@
+header {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #01152E;
+    color: #367F19;
+    line-height: 1.5;
+}
+
+h1, h2, figcaption {
+    text-align: center;
+    color: aliceblue;
+}
+
+ul {
+    /*remove bullets*/
+    list-style: none;
+}
+
+li {
+    float: left;
+    margin-top: 2.5%;
+    /*default width is 100%-->single column for mibile device is default.*/
+}
+
+picture {
+    /*max width of picture elements*/
+    width: 90%;
+}
+
+img {
+    /*max width of image*/
+    width: 90%;
+    transition: transform 1s ease-out;
+    /*the property the transition is modifying, the duration and the control of timing*/
+}
+
+/***Media Queries***********************************************************************************/
+
+/*Always at bottom of page*/
+
+@media screen and (max-width: 600px) {
+    /*small*/
+    /*one column is defauult*/
+    img:hover {
+        /*transform changes position and size of shape*/
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    /*medium*/
+    /*2 column layout*/
+    li {
+        width: 50%;
+    }
+
+    img:hover {
+        transform: skewX(20deg);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /*large*/
+    /*4 column layout*/
+    li {
+        width: 25%;
+    }
+
+    img:hover {
+        transform: scale(1.5, 1.5);
+    }
+}
